@@ -1,13 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.App {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  line-height: 1.5em;
+  font-size: 16px;
+  color: #777676;
+  margin-bottom: 36px;
+}
+
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 13px;
+  }
+}
+
+.DayPickerInput input {
+  width: 120px;
+  height: 24px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .date-picker__container {
+    flex-direction: column;
+  }
+  .DayPickerInput input {
+    width: 200px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-warning {
+  color: rgb(201, 32, 32);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 80%;
+}
+
+button {
+  margin-top: 20px;
+  color: #777676;
+  cursor: pointer;
+  border: 1px solid #b1b1b1;
+  background-color: #eeeeee;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #e7e6e6;
+}
+
+.day-container span {
+  color: #777676;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+
+.day-box {
+  color: #5c5c5c;
+  font-size: 40px;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #cccccc;
+  font-family: 'Oswald', sans-serif;
+}
+
+.holiday-list {
+  margin-top: 40px;
+  color: #777676;
+  padding-left: 0;
+  max-width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.holiday-list li {
+  margin-bottom: 4px;
+  text-align: center;
+  width: 50%;
+  list-style: none;
+}
+
+@media screen and (max-width: 400px) {
+  .holiday-list {
+    flex-direction: column;
+  }
+  .holiday-list li {
+    width: 100%;
+  }
 }
